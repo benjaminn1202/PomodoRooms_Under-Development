@@ -10,7 +10,7 @@
 ## 📌 Overview
 
 **Pomodoro Rooms** is a productivity app built with **React.js (Vite)** that lets you create or join virtual rooms for shared focus sessions.  
-Based on the **Pomodoro Technique**, it helps you stay on track with alternating focus and break cycles — all while staying connected with others.
+Based on the **Pomodoro Technique**, it helps you stay on track with alternating focus and break cycles, all while staying connected with others.
 
 This project is currently **in development**, with plans to integrate **Firebase Authentication** and **Firestore** for real-time data.
 
