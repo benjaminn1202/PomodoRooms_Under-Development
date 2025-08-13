@@ -1,0 +1,45 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      allow read: if request.auth != null && (
+        request.auth.uid == userId || 
+        isUserInSameRoom(request.auth.uid, userId)
+      );
+      
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    match /rooms/{roomId} {
+      allow read: if request.auth != null && 
+        isUserInRoom(request.auth.uid, roomId);
+      
+      allow create: if request.auth != null && 
+        request.resource.data.hostId == request.auth.uid;
+      
+      allow update: if request.auth != null && 
+        isUserInRoom(request.auth.uid, roomId) && 
+        (request.auth.uid == resource.data.hostId || 
+         onlyAllowedFieldsChanged(request));
+      
+      allow delete: if request.auth != null && 
+        request.auth.uid == resource.data.hostId;
+    }
+    
+    function isUserInRoom(userId, roomId) {
+      return userId in get(/databases/$(database)/documents/rooms/$(roomId)).data.participants[].id;
+    }
+    
+    function isUserInSameRoom(userId, targetUserId) {
+      let userRooms = get(/databases/$(database)/documents/rooms.where('participants', 'array_contains', {id: userId}));
+      let targetUserRooms = get(/databases/$(database)/documents/rooms.where('participants', 'array_contains', {id: targetUserId}));
+      return userRooms.intersection(targetUserRooms).size() > 0;
+    }
+    
+    function onlyAllowedFieldsChanged(request) {
+      let allowedFields = ['timerState', 'sessionProgress', 'participants'];
+      return request.resource.data.diff(resource.data).affectedFields()
+        .hasOnly(allowedFields.map(field => field.split('.')));
+    }
+  }
+}

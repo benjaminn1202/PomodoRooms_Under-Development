@@ -1,0 +1,358 @@
+.roomSection {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sectionContainer {
+    background: #FFF8E7;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 32px rgba(62, 62, 62, 0.1);
+  }
+  
+  .roomContainer {
+    width: 100%;
+    margin: 0 2rem;
+  }
+  
+  .roomHeader {
+    text-align: center;
+    background: linear-gradient(135deg, #FFB347 0%, #F4A9A8 100%);
+    border-radius: 0.5rem 0.5rem 0 0;
+    color: white;
+    padding: 2rem 1.5rem;
+  }
+  
+  .roomTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .roomCode {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  .roomContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    background: #FFF8E7;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .roomTimeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 16px rgba(62, 62, 62, 0.08);
+    border: 2px solid #FFB347;
+  }
+  
+  .sessionTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FFB347;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .clock {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 1rem 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid #F4A9A8;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  .progressBar {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 120px;
+    height: 120px;
+    border: 6px solid #FFB347;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(-90deg);
+  }
+  
+  .time {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3E3E3E;
+    z-index: 1;
+  }
+  
+  .buttonGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .startButton {
+    background: #FFB347;
+    color: white;
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 179, 71, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .startButton:hover {
+    background: #e6a040;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 179, 71, 0.4);
+  }
+  
+  .pauseButton,  .resetButton,  .stopButton {
+    background: #F4A9A8;
+    color: white;
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .pauseButton:hover, .stopButton:hover, .resetButton:hover {
+    background: #e89897;
+    transform: translateY(-1px);
+  }
+  
+  .participantsContainer {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 16px rgba(62, 62, 62, 0.08);
+    border: 2px solid #F4A9A8;
+    height: 50vh;
+    min-height: 50vh;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+  
+  .participantsHeading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #F4A9A8;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .participantItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 10px;
+    background: #FFF8E7;
+    transition: all 0.3s ease;
+  }
+  
+  .participantItem:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(62, 62, 62, 0.1);
+  }
+  
+  .participantItem:last-child {
+    margin-bottom: 0;
+  }
+  
+  .participantProfilePicture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #F4A9A8;
+  }
+  
+  .participantInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.25rem;
+  }
+  
+  .participantName {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #3E3E3E;
+    margin: 0;
+  }
+  
+  .participantQuote {
+    font-size: 0.9rem;
+    color: #3E3E3E;
+    opacity: 0.7;
+    margin: 0;
+  }
+  
+  .pillHostIndicator {
+    background: #FFB347;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: auto;
+  }
+  
+  .sessionProgressContainer {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 16px rgba(62, 62, 62, 0.08);
+    border: 2px solid #FFB347;
+  }
+  
+  .sessionProgressHeading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FFB347;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .sessionProgressInformationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .sessionProgressInformationContainer p {
+    background: #FFF8E7;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 0;
+    font-size: 0.95rem;
+    border-left: 4px solid #F4A9A8;
+  }
+  
+  .sessionProgressInformationContainer strong {
+    color: #FFB347;
+    font-weight: 600;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .roomContent {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .sessionProgressContainer {
+        grid-column: 1 / -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .roomContainer {
+        margin: 0 1rem;
+    }
+    
+    .roomTitle {
+        font-size: 1.5rem;
+    }
+    
+    .roomContent {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .roomHeader {
+        padding: 1.5rem 1rem;
+    }
+    
+    .clock {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .progressBar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .time {
+        font-size: 1.2rem;
+    }
+    
+    .participantItem {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0.5rem;
+    }
+    
+    .participantProfilePicture {
+        margin: 0 0 0.5rem 0;
+    }
+    
+    .participantQuote {
+        margin: 0.5rem 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .roomContainer {
+        margin: 0 0.5rem;
+    }
+    
+    .roomTitle {
+        font-size: 1.3rem;
+    }
+    
+    .roomCode {
+        font-size: 0.9rem;
+    }
+    
+    .roomContent {
+        padding: 1rem 0.75rem;
+    }
+    
+    .roomHeader {
+        padding: 1.25rem 0.75rem;
+    }
+    
+    .sessionTitle,
+    .participantsHeading,
+    .sessionProgressHeading {
+        font-size: 1.1rem;
+    }
+    
+    .startButton {
+        font-size: 0.9rem;
+    }
+    
+    .pauseButton {
+        font-size: 0.8rem;
+    }
+  }

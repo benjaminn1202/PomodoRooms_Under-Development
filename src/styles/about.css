@@ -1,0 +1,171 @@
+.aboutHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.8s ease-out;
+  }
+  .aboutTitle {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(255, 107, 107, 0.1);
+    position: relative;
+  }
+  .aboutTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #feca57);
+    border-radius: 2px;
+  }
+  .aboutTagline {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
+  .aboutDescription {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #636e72;
+    line-height: 1.8;
+  }
+  .howItWorksSection {
+    margin-top: 5rem;
+  }
+  .howItWorksHeading {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #2d3436;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    position: relative;
+  }
+  .stepsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem;
+  }
+  .stepContainer {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 107, 107, 0.1);
+  }
+  .stepContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #feca57);
+  }
+  .stepContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .stepIcon {
+    font-size: 3rem;
+    color: #ff6b6b;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  
+  .stepContainer h3 {
+    font-size: 1.3rem;
+    color: #2d3436;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .stepContainer p {
+    color: #636e72;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+  .featureHighlight {
+    background: rgba(255, 107, 107, 0.05);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin: 4rem 0;
+    text-align: center;
+    border: 2px solid rgba(255, 107, 107, 0.1);
+  }
+  .featureTitle {
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .featureList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .featureItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #636e72;
+    font-size: 0.95rem;
+  }
+  .featureItem i {
+    color: #ff6b6b;
+    font-size: 1.1rem;
+  }
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  .stepContainer:nth-child(1) { animation: fadeInUp 0.8s ease-out 0.1s both; }
+  .stepContainer:nth-child(2) { animation: fadeInUp 0.8s ease-out 0.2s both; }
+  .stepContainer:nth-child(3) { animation: fadeInUp 0.8s ease-out 0.3s both; }
+  .stepContainer:nth-child(4) { animation: fadeInUp 0.8s ease-out 0.4s both; }
+  @media (max-width: 768px) {
+    .sectionContainer {
+        padding: 0 1rem;
+    }
+    
+    .stepsContainer {
+        grid-template-columns: 1fr;
+    }
+    
+    .stepContainer {
+        padding: 2rem 1.5rem;
+    }
+    
+    .featureList {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  .stepIcon {
+    animation: float 3s ease-in-out infinite;
+  }
+  .stepContainer:nth-child(2) .stepIcon { animation-delay: -1s; }
+  .stepContainer:nth-child(3) .stepIcon { animation-delay: -2s; }
+  .stepContainer:nth-child(4) .stepIcon { animation-delay: -3s; }

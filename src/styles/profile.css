@@ -1,0 +1,146 @@
+.profileContainer {
+    width: 100%;
+    margin: 0 2rem;
+  }
+  .profileContainer h2 {
+    color: #FFB347;
+  }
+  .profileContainer .profileTitle {
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 0;
+    color: #FFB347;
+  }
+  .profileContainer .profileText {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+  }
+  .profileContainer .profileContent {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 2rem;
+  }
+  .profileContainer .profileContent .profileInformationContainer {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff8e7;
+    border-radius: 0.5rem;
+    border: 1px solid #ffce47;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+  }
+  .profileContainer .profileContent .profileInformationContainer .profilePictureContainer {
+    width: 10rem;
+    height: 10rem;
+    margin: 2rem;
+    position: relative;
+  }
+  .profileContainer .profileContent .profileInformationContainer .profilePictureContainer button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #FFB347;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+    position: absolute;
+    right: 12.5%;
+    top: 2px;
+  }
+  .profileContainer .profileContent .profileInformationContainer .profilePictureContainer button:hover {
+    background-color: #e8a23f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+  .profileContainer .profileContent .profileInformationContainer .profilePictureContainer img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .profileContainer .profileContent .profileInformationContainer  label {
+    text-align: left;
+    width: 75%;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  .profileContainer .profileContent .profileInformationContainer  input {
+    width: 70%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid #ffce47;
+    transition: border-color 0.2s ease;
+    margin-bottom: 1rem;
+  }
+  .profileContainer .profileContent .profileInformationContainer input:focus {
+    box-shadow: 0 0 6px rgba(255, 179, 71, 0.4);
+  }
+  .profileContainer .profileContent .profileInformationContainer .updateProfileButton {
+    width: 76%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFF8E7;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    margin-bottom: 1rem;
+    background-color: #FFB347;
+    border: 1px solid #FFB347;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .profileContainer .profileContent .profileInformationContainer .updateProfileButton:hover {
+    background-color: #e8a23f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  .profileContainer .profileContent .profileStatisticsContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: #fff8e7;
+    border-radius: 0.5rem;
+    border: 1px solid #ffce47;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+    gap: 1.5rem;
+  }
+  .profileContainer .profileContent .profileStatisticsContainer .pomodoroStatisticContainer {
+    width: calc(100% - 4rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff8e7;
+    border-radius: 0.5rem;
+    border: 1px solid #ffce47;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+  }
+  .profileContainer .profileContent .profileStatisticsContainer .pomodoroStatisticContainer h3 {
+    margin-bottom: 0;
+    color: #e8a23f;
+    font-size: 2rem;
+  }
+  .profileContainer .profileContent .profileStatisticsContainer .pomodoroStatisticContainer p {
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }

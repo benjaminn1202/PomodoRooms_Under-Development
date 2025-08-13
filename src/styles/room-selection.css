@@ -1,0 +1,90 @@
+.roomSelectionContainer {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    color: #3E3E3E;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    width: 100%;
+    margin: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.roomSelectionContainer .createOrJoinRoomContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff8e7;
+  border-radius: 0.5rem;
+  border: 1px solid #ffce47;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.roomSelectionContainer .createOrJoinRoomContainer h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.roomSelectionContainer .createOrJoinRoomContainer .createRoomHeading {
+  color: #FFB347;
+}
+.roomSelectionContainer .createOrJoinRoomContainer .joinRoomHeading {
+  color: #F4A9A8;
+}
+.roomSelectionContainer .createOrJoinRoomContainer label {
+  text-align: left;
+  width: 75%;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.roomSelectionContainer .createOrJoinRoomContainer input {
+  width: 70%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid #ffce47;
+  transition: border-color 0.2s ease;
+  margin-bottom: 1rem;
+}
+.roomSelectionContainer .createOrJoinRoomContainer input:focus {
+  box-shadow: 0 0 6px rgba(255, 179, 71, 0.4);
+}
+.roomSelectionContainer .createOrJoinRoomContainer .createRoomButton,
+.roomSelectionContainer .createOrJoinRoomContainer .joinRoomButton {
+  width: 76%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFF8E7;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  margin-bottom: 1rem;
+}
+.roomSelectionContainer .createOrJoinRoomContainer .createRoomButton {
+  background-color: #FFB347;
+  border: 1px solid #FFB347;
+}
+.roomSelectionContainer .createOrJoinRoomContainer .createRoomButton:hover {
+  background-color: #e8a23f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+.roomSelectionContainer .createOrJoinRoomContainer .joinRoomButton {
+  background-color: #F4A9A8;
+  border: 1px solid #F4A9A8;
+}
+.roomSelectionContainer .createOrJoinRoomContainer .joinRoomButton:hover {
+  background-color: #e19392;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}

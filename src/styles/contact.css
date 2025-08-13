@@ -1,0 +1,273 @@
+.contactSection {
+    width: 100%;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .contactSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ff6b6b" fill-opacity="0.03"><circle cx="30" cy="30" r="4"/></g></g></svg>');
+    pointer-events: none;
+  }
+  .contactHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.8s ease-out;
+  }
+  .contactTitle {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(255, 107, 107, 0.1);
+    position: relative;
+  }
+  .contactTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #feca57);
+    border-radius: 2px;
+  }
+  .contactTagline {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
+  .contactDescription {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #636e72;
+    line-height: 1.8;
+  }
+  .contactInfoSection {
+    margin: 0 2rem;
+  }
+  .contactInfoHeading {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #2d3436;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    position: relative;
+  }
+  .contactGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .contactCard {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 107, 107, 0.1);
+  }
+  .contactCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #feca57);
+  }
+  .contactCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  .contactIcon {
+    font-size: 3rem;
+    color: #ff6b6b;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  .contactCard h3 {
+    font-size: 1.3rem;
+    color: #2d3436;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .contactCard p, .contactCard a {
+    color: #636e72;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .contactCard a:hover {
+    color: #ff6b6b;
+    text-decoration: underline;
+  }
+  .socialLinksSection {
+    background: rgba(255, 107, 107, 0.05);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin: 4rem 0;
+    text-align: center;
+    border: 2px solid rgba(255, 107, 107, 0.1);
+  }
+  .socialTitle {
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  .socialLinks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .socialLink {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    text-decoration: none;
+    color: #636e72;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 107, 107, 0.1);
+    min-width: 200px;
+  }
+  .socialLink:hover {
+    background: rgba(255, 107, 107, 0.1);
+    color: #ff6b6b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  .socialLink i {
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    min-width: 20px;
+  }
+  .messageForm {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.1);
+    position: relative;
+  }
+  .messageForm::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #feca57);
+    border-radius: 20px 20px 0 0;
+  }
+  .formTitle {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2d3436;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  .formGroup {
+    margin-bottom: 1.5rem;
+  }
+  .formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2d3436;
+    font-weight: 500;
+  }
+  .formGroup input,
+  .formGroup textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid rgba(255, 107, 107, 0.2);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  .formGroup input:focus,
+  .formGroup textarea:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+  }
+  .submitBtn {
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto;
+    min-width: 200px;
+  }
+  .submitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+  }
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  .contactCard:nth-child(1) { animation: fadeInUp 0.8s ease-out 0.1s both; }
+  .contactCard:nth-child(2) { animation: fadeInUp 0.8s ease-out 0.2s both; }
+  .contactCard:nth-child(3) { animation: fadeInUp 0.8s ease-out 0.3s both; }
+  @media (max-width: 768px) {
+    .sectionContainer {
+        padding: 0 1rem;
+    }
+    .contactGrid {
+        grid-template-columns: 1fr;
+    }
+    .contactCard {
+        padding: 2rem 1.5rem;
+    }
+    .socialLinks {
+        flex-direction: column;
+        align-items: center;
+    }
+    .socialLink {
+        min-width: auto;
+        width: 100%;
+        max-width: 300px;
+    }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  .contactIcon {
+    animation: float 3s ease-in-out infinite;
+  }
+  .contactCard:nth-child(2) .contactIcon { animation-delay: -1s; }
+  .contactCard:nth-child(3) .contactIcon { animation-delay: -2s; }
